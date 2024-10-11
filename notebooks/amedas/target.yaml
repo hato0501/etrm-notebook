@@ -1,0 +1,5 @@
+start_date: 2023-01-01
+end_date: 2024-09-23
+resolutions: [hourly] # daily, hourly, 10min, realtime
+targets:
+  - "47662"
