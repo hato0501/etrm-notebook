@@ -1,7 +1,5 @@
 FROM debian:bookworm-slim AS builder
 
-LABEL maintainer="a5chin <a5chin.origin+contact@gmain.com>"
-
 WORKDIR /opt
 
 # The installer requires curl (and certificates) to download the release archive
@@ -9,7 +7,8 @@ WORKDIR /opt
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         ca-certificates \
-        curl
+        curl \
+        fonts-noto-cjk
 
 SHELL [ "/bin/bash", "-o", "pipefail", "-c" ]
 
